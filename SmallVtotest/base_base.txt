@@ -1,0 +1,128 @@
+--tu jest taki jakby staly zestaw tabelek ktorych wartosci poczatkowe sie za bardzo nie zmieniaja
+--kraje
+
+--INSERT INTO Country (ID_Country,Country_Name,Country_code) VALUES();
+
+INSERT INTO Country (ID_Country,Country_Name,Country_code) VALUES(1,'Poland','1');
+INSERT INTO Country (ID_Country,Country_Name,Country_code) VALUES(2,'Kenya','2');
+INSERT INTO Country (ID_Country,Country_Name,Country_code) VALUES(3,'Germany','3');
+INSERT INTO Country (ID_Country,Country_Name,Country_code) VALUES(4,'Peru','4');
+INSERT INTO Country (ID_Country,Country_Name,Country_code) VALUES(5,'USA','5');
+INSERT INTO Country (ID_Country,Country_Name,Country_code) VALUES(6,'Russia','6');
+INSERT INTO Country (ID_Country,Country_Name,Country_code) VALUES(7,'China','7');
+INSERT INTO Country (ID_Country,Country_Name,Country_code) VALUES(8,'France','8');
+INSERT INTO Country (ID_Country,Country_Name,Country_code) VALUES(9,'Portugal','9');
+INSERT INTO Country (ID_Country,Country_Name,Country_code) VALUES(10,'Great Britain','10');
+
+--typy uzytkownikow
+INSERT INTO AdminRank (ID_Rank,RankName) VALUES(0,'Admin');
+INSERT INTO AdminRank (ID_Rank,RankName) VALUES(1,'User');
+--danie im jakichs uprawnien
+INSERT INTO Permissions (ID_Rank,OrderService,CreatingUser,DeletingUser,DatabaseAccess) VALUES(1,'T','F','F','F');
+INSERT INTO Permissions (ID_Rank,OrderService,CreatingUser,DeletingUser,DatabaseAccess) VALUES(0,'T','T','T','T');
+
+--Tworzenie OrderStatus
+INSERT INTO OrderStatus (ID_status,Name_status) VALUES(0,'Pending');
+INSERT INTO OrderStatus (ID_status,Name_status) VALUES(1,'Awaiting Payment');
+INSERT INTO OrderStatus (ID_status,Name_status) VALUES(2,'Awaiting Pickup');
+INSERT INTO OrderStatus (ID_status,Name_status) VALUES(3,'Cancelled');
+INSERT INTO OrderStatus (ID_status,Name_status) VALUES(4,'Refunded');
+INSERT INTO OrderStatus (ID_status,Name_status) VALUES(5,'Manual Verification Required');
+INSERT INTO OrderStatus (ID_status,Name_status) VALUES(6,'Competed');
+--DeliveryMethod
+INSERT INTO DeliveryMethod (ID_delivery,Delivery_name) VALUES(0,'Long throw of the package by a qualified worker');
+INSERT INTO DeliveryMethod (ID_delivery,Delivery_name) VALUES(1,'DPD');
+INSERT INTO DeliveryMethod (ID_delivery,Delivery_name) VALUES(2,'InPost');
+INSERT INTO DeliveryMethod (ID_delivery,Delivery_name) VALUES(3,'Pickup in person');
+
+--PaymentMethod
+INSERT INTO PaymentMethod(ID_payment,Payment_method) VALUES(0,'PayPal');
+INSERT INTO PaymentMethod(ID_payment,Payment_method) VALUES(1,'Cash');
+INSERT INTO PaymentMethod(ID_payment,Payment_method) VALUES(2,'Credit Card');
+INSERT INTO PaymentMethod(ID_payment,Payment_method) VALUES(3,'Bitcoin');
+INSERT INTO PaymentMethod(ID_payment,Payment_method) VALUES(4,'Payment with the help of organs');
+INSERT INTO PaymentMethod(ID_payment,Payment_method) VALUES(5,'Payment on delivery');
+
+--ProductCategory
+
+INSERT INTO ProductCategory(ProductCategoryKey,ProductCategoryName) VALUES(0,'Mac');
+INSERT INTO ProductCategory(ProductCategoryKey,ProductCategoryName) VALUES(1,'iPhone');
+INSERT INTO ProductCategory(ProductCategoryKey,ProductCategoryName) VALUES(2,'iPad');
+INSERT INTO ProductCategory(ProductCategoryKey,ProductCategoryName) VALUES(3,'Watch');
+INSERT INTO ProductCategory(ProductCategoryKey,ProductCategoryName) VALUES(4,'iTruck');
+INSERT INTO ProductCategory(ProductCategoryKey,ProductCategoryName) VALUES(5,'accessories');
+
+--ProductSubCategory
+
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(0,'iMac',0);
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(1,'MacBook Air',0);
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(2,'MacBook Air Pro',0);
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(3,'MacBook Pro',0);
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(4,'Mac mini',0);
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(5,'Mac Pro',0);
+
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(6,'iPhone 13 Pro MAX',1);
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(7,'iPhone 13 Pro',1);
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(8,'iPhone 13 ',1);
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(9,'iPhone 13 mini',1);
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(10,'iPhone 12',1);
+
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(11,'iPad Pro 12,9',2);
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(12,'iPad Pro 11',2);
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(13,'iPad mini',2);
+
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(14,'Watch Series 7',3);
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(15,'Watch  Nike+ Series 7',3);
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(16,'Watch Series 6',3);
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(17,'Watch SE',3);
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(18,'Watch Series 3',3);
+
+
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(19,'iTruck Lite',4);
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(20,'iTruck Pro',4);
+
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(21,'Air Tag',5);
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(22,'Charger',5);
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(23,'Power Supply',5);
+INSERT INTO ProductSubcategory(ProductSubcategoryKey,ProductSubcategoryName,ProductCategoryKey) VALUES(24,'Protective glass',5);
+
+
+
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(0,'iMac','',20,0);
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey)) VALUES(1,'MacBook Air','',20,0);
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(2,'MacBook Air Pro','',20,0);
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(3,'MacBook Pro','',20,0);
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(4,'Mac mini','',20,0);
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(5,'Mac Pro','',20,0);
+
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(6,'iPhone 13 Pro MAX','',20,1);
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(7,'iPhone 13 Pro','',20,1);
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(8,'iPhone 13 ','',20,1);
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(9,'iPhone 13 mini','',20,1);
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(10,'iPhone 12','',20,1);
+
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(11,'iPad Pro 12,9','',20,2);
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(12,'iPad Pro 11','',20,2);
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(13,'iPad mini','',20,2);
+
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(14,'Watch Series 7','',20,3);
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(15,'Watch  Nike+ Series 7','',20,3);
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(16,'Watch Series 6','',20,3);
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(17,'Watch SE','',20,3);
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(18,'Watch Series 3','',20,3);
+
+
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(19,'iTruck Lite','',20,4);
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(20,'iTruck Pro','',20,4);
+
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(21,'Air Tag','',20,5);
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(22,'Charger','',20,5);
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(23,'Power Supply','',20,5);
+INSERT INTO Product(ID_product,Name,Description,Quantity,ProductSubcategoryKey) VALUES(24,'Protective glass','',20,5);
+
+
+
+
+
+
+
