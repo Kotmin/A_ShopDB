@@ -1,0 +1,5 @@
+In several places, we have too small data containers.
+This must be taken into account in future projects.
+
+
+Special thanks to Kuba for throwing the main.cpp file here from the algorithmic classes traded for cookies
